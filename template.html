@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff9ef">
+<meta name="description" content="Каскад — уютный пинбол, который ты строишь сам. Мобильный HTML-прототип.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Каскад · карманный пинбол</title>
+<style>/*__STYLE__*/</style>
+</head>
+<body>
+<div id="app">
+<header class="topbar">
+ <button class="hud-stage" data-action="open-map" aria-label="Открыть карту"><small>ПОЛЕ</small><strong id="stageLabel">1</strong></button>
+ <div class="hud-progress" aria-label="Прогресс текущего поля">
+  <div class="hud-progress-line"><span><strong id="scoreValue">0</strong><em>/</em><span id="goalValue">800</span></span><b id="progressPercent">0%</b></div>
+  <div class="progress-track"><div id="progressFill"></div></div>
+ </div>
+ <div class="wallet"><span class="currency coins" aria-label="Монеты"><i></i><strong id="coinsValue">0</strong></span><span class="currency gems" aria-label="Кристаллы"><i></i><strong id="gemsValue">0</strong></span></div>
+ <button class="icon-button" id="settingsBtn" aria-label="Настройки"></button>
+</header>
+<main class="layout">
+ <section class="game-column" aria-label="Пинбол">
+  <div class="board-space">
+   <div class="board-wrap" id="boardWrap">
+    <canvas id="board" width="440" height="700" tabindex="0" aria-label="Если шарика нет, зажмите поле и отпустите для запуска. Пока шарик на поле, тап по игровому полю отбивает его."></canvas>
+    <div class="board-top"><span class="board-badge" id="boardStatus"><i></i>АВТООТБИВ</span><span class="combo-badge" id="comboBadge">СЕРИЯ <b id="comboValue">×1.00</b></span></div>
+    <div class="board-prompt" id="boardPrompt"><span class="prompt-hand" data-icon="touch"></span><strong>Тапай прямо по полю</strong><span>Зажми и отпусти, чтобы запустить</span></div>
+    <div class="event-banner" id="eventBanner"></div>
+    <button id="advanceBtn" class="advance-button"><span class="reward-star" data-icon="star"></span><span>Отличный каскад!<strong>Забрать награду</strong></span><b id="advanceReward">+3</b><i class="gem-mini"></i></button>
+   </div>
+  </div>
+  <aside class="right-rail" id="rightRail"><div id="rightContent"></div></aside>
+  <div class="editor-console" id="editorConsole"><span id="editorHint">Выбери ячейку на поле</span><button id="finishEdit" class="btn primary">Готово <span>✓</span></button></div>
+  <div class="prep-console" id="prepConsole"><div><b>Новое поле готово!</b><small>Сначала выбери навыки и сборку</small></div><button id="startFieldBtn" class="btn primary">Начать ›</button></div>
+ </section>
+</main>
+<nav class="game-nav" aria-label="Разделы игры">
+ <button id="playTab" class="active" aria-label="Играть"><span data-icon="play"></span><span>Игра</span></button>
+ <button id="workshopBtn"><span data-icon="blocks"></span><span>Модули</span><i id="shopDot"></i></button>
+ <button id="treeBtn"><span data-icon="tree"></span><span>Навыки</span><i id="treeDot"></i></button>
+ <button id="mapBtn"><span data-icon="map"></span><span>Карта</span></button>
+ <button id="menuTab"><span data-icon="menu"></span><span>Меню</span></button>
+</nav>
+<div id="modalRoot"></div>
+<div class="toast-stack" id="toasts" aria-live="polite"></div>
+<div hidden aria-hidden="true" id="legacyData"><span id="modeLabel"></span><span id="chapterName"></span><span id="sectorMark"></span><span id="chapterCopy"></span><span id="chapterTrack"></span><span id="nextUnlock"></span><span id="runNumber"></span><span id="perfectStat"></span><span id="hitStat"></span><span id="progressText"></span><span id="saveStatus"></span><button id="soundBtn"></button><button id="helpBtn"></button><button id="mobileAutoBtn"></button><button id="sandboxBtn"></button></div>
+<input type="file" id="importInput" accept="application/json,.json" hidden>
+</div>
+<script>/*__SCRIPT__*/</script>
+</body>
+</html>
