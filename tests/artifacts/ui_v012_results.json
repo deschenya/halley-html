@@ -1,0 +1,847 @@
+{
+  "checks": [
+    {
+      "name": "launch meter follows the hold 320x568",
+      "passed": true,
+      "detail": [
+        24,
+        61
+      ]
+    },
+    {
+      "name": "circle artwork uses equal X/Y scale 320x568",
+      "passed": true,
+      "detail": {
+        "circles": 2277,
+        "text": 276,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "canvas type and price tags are not stretched 320x568",
+      "passed": true,
+      "detail": {
+        "circles": 2277,
+        "text": 276,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "power meter clears the flippers 320x568",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 41.59375,
+          "y": 529,
+          "width": 211.1875,
+          "height": 34,
+          "bottom": 563
+        },
+        "flipperBottom": 526.9191830764355,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "charge contents fit, including 100 percent 320x568",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 41.59375,
+          "y": 529,
+          "width": 211.1875,
+          "height": 34,
+          "bottom": 563
+        },
+        "flipperBottom": 526.9191830764355,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "meter is touch-through and shows A4 marker 320x568",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 41.59375,
+          "y": 529,
+          "width": 211.1875,
+          "height": 34,
+          "bottom": 563
+        },
+        "flipperBottom": 526.9191830764355,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "release still launches the ball 320x568",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "charge panel hides after release 320x568",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "square settings icons remain square 320x568",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "skill icons remain square 320x568",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "launch meter follows the hold 360x640",
+      "passed": true,
+      "detail": [
+        25,
+        62
+      ]
+    },
+    {
+      "name": "circle artwork uses equal X/Y scale 360x640",
+      "passed": true,
+      "detail": {
+        "circles": 2244,
+        "text": 272,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "canvas type and price tags are not stretched 360x640",
+      "passed": true,
+      "detail": {
+        "circles": 2244,
+        "text": 272,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "power meter clears the flippers 360x640",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 46.796875,
+          "y": 601,
+          "width": 237.59375,
+          "height": 34,
+          "bottom": 635
+        },
+        "flipperBottom": 593.0037416977444,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "charge contents fit, including 100 percent 360x640",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 46.796875,
+          "y": 601,
+          "width": 237.59375,
+          "height": 34,
+          "bottom": 635
+        },
+        "flipperBottom": 593.0037416977444,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "meter is touch-through and shows A4 marker 360x640",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 46.796875,
+          "y": 601,
+          "width": 237.59375,
+          "height": 34,
+          "bottom": 635
+        },
+        "flipperBottom": 593.0037416977444,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "release still launches the ball 360x640",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "charge panel hides after release 360x640",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "square settings icons remain square 360x640",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "skill icons remain square 360x640",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "launch meter follows the hold 360x740",
+      "passed": true,
+      "detail": [
+        24,
+        61
+      ]
+    },
+    {
+      "name": "circle artwork uses equal X/Y scale 360x740",
+      "passed": true,
+      "detail": {
+        "circles": 2244,
+        "text": 272,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "canvas type and price tags are not stretched 360x740",
+      "passed": true,
+      "detail": {
+        "circles": 2244,
+        "text": 272,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "power meter clears the flippers 360x740",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 46.796875,
+          "y": 686,
+          "width": 237.59375,
+          "height": 44,
+          "bottom": 730
+        },
+        "flipperBottom": 683.4242145303706,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "charge contents fit, including 100 percent 360x740",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 46.796875,
+          "y": 686,
+          "width": 237.59375,
+          "height": 44,
+          "bottom": 730
+        },
+        "flipperBottom": 683.4242145303706,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "meter is touch-through and shows A4 marker 360x740",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 46.796875,
+          "y": 686,
+          "width": 237.59375,
+          "height": 44,
+          "bottom": 730
+        },
+        "flipperBottom": 683.4242145303706,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "release still launches the ball 360x740",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "charge panel hides after release 360x740",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "square settings icons remain square 360x740",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "skill icons remain square 360x740",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "launch meter follows the hold 390x844",
+      "passed": true,
+      "detail": [
+        24,
+        61
+      ]
+    },
+    {
+      "name": "circle artwork uses equal X/Y scale 390x844",
+      "passed": true,
+      "detail": {
+        "circles": 2178,
+        "text": 264,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "canvas type and price tags are not stretched 390x844",
+      "passed": true,
+      "detail": {
+        "circles": 2178,
+        "text": 264,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "power meter clears the flippers 390x844",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 57.390625,
+          "y": 790,
+          "width": 244,
+          "height": 44,
+          "bottom": 834
+        },
+        "flipperBottom": 778.3349150014674,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "charge contents fit, including 100 percent 390x844",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 57.390625,
+          "y": 790,
+          "width": 244,
+          "height": 44,
+          "bottom": 834
+        },
+        "flipperBottom": 778.3349150014674,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "meter is touch-through and shows A4 marker 390x844",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 57.390625,
+          "y": 790,
+          "width": 244,
+          "height": 44,
+          "bottom": 834
+        },
+        "flipperBottom": 778.3349150014674,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "release still launches the ball 390x844",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "charge panel hides after release 390x844",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "square settings icons remain square 390x844",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "skill icons remain square 390x844",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "launch meter follows the hold 430x932",
+      "passed": true,
+      "detail": [
+        25,
+        62
+      ]
+    },
+    {
+      "name": "circle artwork uses equal X/Y scale 430x932",
+      "passed": true,
+      "detail": {
+        "circles": 2244,
+        "text": 272,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "canvas type and price tags are not stretched 430x932",
+      "passed": true,
+      "detail": {
+        "circles": 2244,
+        "text": 272,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "power meter clears the flippers 430x932",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 75.796875,
+          "y": 878,
+          "width": 244,
+          "height": 44,
+          "bottom": 922
+        },
+        "flipperBottom": 858.8140220032692,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "charge contents fit, including 100 percent 430x932",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 75.796875,
+          "y": 878,
+          "width": 244,
+          "height": 44,
+          "bottom": 922
+        },
+        "flipperBottom": 858.8140220032692,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "meter is touch-through and shows A4 marker 430x932",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 75.796875,
+          "y": 878,
+          "width": 244,
+          "height": 44,
+          "bottom": 922
+        },
+        "flipperBottom": 858.8140220032692,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "release still launches the ball 430x932",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "charge panel hides after release 430x932",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "square settings icons remain square 430x932",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "skill icons remain square 430x932",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "launch meter follows the hold 320x480",
+      "passed": true,
+      "detail": [
+        24,
+        61
+      ]
+    },
+    {
+      "name": "circle artwork uses equal X/Y scale 320x480",
+      "passed": true,
+      "detail": {
+        "circles": 2244,
+        "text": 272,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "canvas type and price tags are not stretched 320x480",
+      "passed": true,
+      "detail": {
+        "circles": 2244,
+        "text": 272,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "power meter clears the flippers 320x480",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 41.59375,
+          "y": 454,
+          "width": 211.1875,
+          "height": 25,
+          "bottom": 479
+        },
+        "flipperBottom": 446.0920241265817,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "charge contents fit, including 100 percent 320x480",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 41.59375,
+          "y": 454,
+          "width": 211.1875,
+          "height": 25,
+          "bottom": 479
+        },
+        "flipperBottom": 446.0920241265817,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "meter is touch-through and shows A4 marker 320x480",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 41.59375,
+          "y": 454,
+          "width": 211.1875,
+          "height": 25,
+          "bottom": 479
+        },
+        "flipperBottom": 446.0920241265817,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "release still launches the ball 320x480",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "charge panel hides after release 320x480",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "square settings icons remain square 320x480",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "skill icons remain square 320x480",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "launch meter follows the hold 1440x900",
+      "passed": true,
+      "detail": [
+        25,
+        62
+      ]
+    },
+    {
+      "name": "circle artwork uses equal X/Y scale 1440x900",
+      "passed": true,
+      "detail": {
+        "circles": 2244,
+        "text": 272,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "canvas type and price tags are not stretched 1440x900",
+      "passed": true,
+      "detail": {
+        "circles": 2244,
+        "text": 272,
+        "maxCircle": 1,
+        "maxText": 1
+      }
+    },
+    {
+      "name": "power meter clears the flippers 1440x900",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 580.796875,
+          "y": 834,
+          "width": 244,
+          "height": 44,
+          "bottom": 878
+        },
+        "flipperBottom": 820.1785572169987,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "charge contents fit, including 100 percent 1440x900",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 580.796875,
+          "y": 834,
+          "width": 244,
+          "height": 44,
+          "bottom": 878
+        },
+        "flipperBottom": 820.1785572169987,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "meter is touch-through and shows A4 marker 1440x900",
+      "passed": true,
+      "detail": {
+        "meter": {
+          "x": 580.796875,
+          "y": 834,
+          "width": 244,
+          "height": 44,
+          "bottom": 878
+        },
+        "flipperBottom": 820.1785572169987,
+        "below": true,
+        "inside": true,
+        "contained": true,
+        "touch": "none",
+        "full": true,
+        "percent": "100%",
+        "marker": true
+      }
+    },
+    {
+      "name": "release still launches the ball 1440x900",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "charge panel hides after release 1440x900",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "square settings icons remain square 1440x900",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "skill icons remain square 1440x900",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "opening window has a UI animation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "world keeps simulating during window animation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "skill upgrade has a local bounce",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "upgrade preserves popup and map elements",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "dismissal animates but immediately releases gameplay",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rapid reopening cannot be removed by an old close callback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "switch responds without replacing settings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "opening menu cancels charge and its indicator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "game reduced motion disables UI animations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reduced motion does not disable charge feedback False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "OS reduced motion disables UI animations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reduced motion does not disable charge feedback True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no uncaught browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": []
+}
