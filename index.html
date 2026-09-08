@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#fff8f0">
 <meta name="description" content="Каскад — уютный пинбол, который ты строишь сам. Мобильный HTML-прототип.">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Каскад · v0.13</title>
+<title>Каскад · v0.14</title>
 <style>
 :root{
  --bg:#f9fcff;--panel:#ffffff;--text:#263d56;--muted:#71859a;--mint:#0aba9e;--gold:#bd8500;--line:#e5edf4;--hud-h:66px;
@@ -393,7 +393,7 @@ const W=440,H=700,STEP=1/120,TAU=Math.PI*2;
 // are shared by collision geometry, live launches, insurance and the renderer.
 // 236 clears every outline; the divider begins 24 units lower, leaving room
 // for a full ball to turn into the playfield. Never teleport into a roof.
-const PHYSICS_REVISION='0.13-pastel-art-pass';
+const PHYSICS_REVISION='0.14-launch-lane-aware-layout';
 const LAUNCHER=Object.freeze({x:398,spawnY:624,exitY:236,dividerX:382,
  dividerTop:260,dividerBottom:674,baseSpeed:940,chargeSpeed:150,
  exitVx:300,exitVxCharge:180,exitVy:320,exitVyCharge:150,
@@ -518,12 +518,12 @@ const FIELD_FEATURE_TYPES=[
 function hazardsFor(stage){
  if(stage<16)return [];
  const hazards=[
-  {id:'hazard-top-left',type:'spike',x:138,y:145,r:9},
-  {id:'hazard-top-right',type:'spike',x:270,y:145,r:9}
+  {id:'hazard-top-left',type:'spike',x:105,y:128,r:9},
+  {id:'hazard-top-right',type:'spike',x:301,y:128,r:9}
  ];
  if(stage>=21){const type=stage%2?'hole':'spike';hazards.push(
-  {id:'hazard-low-left',type,x:138,y:575,r:9},
-  {id:'hazard-low-right',type,x:270,y:575,r:9}
+  {id:'hazard-low-left',type,x:150,y:558,r:9},
+  {id:'hazard-low-right',type,x:256,y:558,r:9}
  );}
  return hazards;
 }
@@ -550,22 +550,17 @@ const FIELD_PERMUTATIONS=[
  [0,3,9,14,1,7,12,6,4,15,8,2,11,13,5,10]
 ];
 function safeLayout(stage){
- const variant=fieldVariant(stage);
- const left=124,right=316,outerLeft=90,outerRight=350,midLeft=165,midRight=275,center=220;
- const yOffset=[0,7,-6,12,-10,4,-3,9][variant];
- const points=[
-  {x:left,y:186+yOffset},{x:right,y:186+yOffset},
-  {x:outerLeft,y:268+yOffset},{x:outerRight,y:268+yOffset},
-  {x:center,y:226+yOffset},
-  {x:left,y:346+yOffset},{x:right,y:346+yOffset},
-  {x:center,y:306+yOffset},
-  {x:outerLeft,y:424+yOffset},{x:outerRight,y:424+yOffset},
-  {x:center,y:384+yOffset},
-  {x:midLeft,y:502+yOffset},{x:midRight,y:502+yOffset},
-  {x:center,y:462+yOffset},
-  {x:166,y:566+yOffset},{x:274,y:566+yOffset}
- ];
- if(modifier(stage)===3)for(const p of points)p.x=440-p.x;
+ // The right launch chute is not part of the placement chamber.
+ // The chamber center is x=204; every pair mirrors around that line while
+ // the rightmost artwork remains safely left of LAUNCHER.dividerX.
+ const center=204,inner=[160,248],outer=[92,316];
+ const ys=[160,207,254,301,348,395,442,489];
+ const points=[];
+ for(let row=0;row<ys.length;row++){
+  const pair=row%2===0?inner:outer;
+  points.push({x:pair[0],y:ys[row]},{x:pair[1],y:ys[row]});
+ }
+ if(modifier(stage)===3)for(const p of points)p.x=2*center-p.x;
  return points;
 }
 function featuresFor(stage,records={}){
@@ -594,7 +589,7 @@ function syncWorldObjects(){
  world.updateModules(state.inventory);
 }
 function objectBounds(m,includePrice=true){
- return {left:m.x-36,right:m.x+36,top:m.y-36,bottom:m.y+(includePrice?56:36)};
+ return {left:m.x-32,right:m.x+32,top:m.y-32,bottom:m.y+(includePrice?48:32)};
 }
 function segmentIntersectsRect(a,b,r){
  let lo=0,hi=1;
@@ -613,7 +608,7 @@ function layoutAudit(stage){
   for(let i=1;i<chain.length;i++)walls.push([chain[i-1],chain[i],11]);
  for(let i=0;i<bounds.length;i++){
    const a=bounds[i],p=positions[i];
-   if(a.left<39||a.right>370||a.top<124||a.bottom>550)errors.push({kind:'boundary',slot:i});
+   if(a.left<39||a.right>LAUNCHER.dividerX-16||a.top<124||a.bottom>550)errors.push({kind:'boundary',slot:i});
    for(let j=i+1;j<bounds.length;j++){
      const b=bounds[j];
      if(a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top)errors.push({kind:'overlap',slots:[i,j]});
@@ -1890,7 +1885,7 @@ function frame(now){if(world.charging)world.chargeUI=clamp((now-(ui.holdClock??n
 rebuildWorld();renderer=new PinballRenderer(canvas);renderAll();fitBoard();saveNow();scheduleRate();requestAnimationFrame(frame);
 if(loadWarning)toast(loadWarning,true);if(offlineNotice)setTimeout(showOffline,150);
 // Small, documented inspection API for local prototype testing; no network calls.
-window.Kaskad={version:'0.13.0',snapshot:()=>copy(state),get world(){return world;},get mode(){return mode;},get ui(){return copy({...ui,focus:null});},get camera(){return renderer?renderer.camera():null;},engine:PinballWorld,config:engineConfig,calculateRate,goal,reward,skills:copy(SKILLS),types:copy(TYPES),launcher:LAUNCHER,physicsRevision:PHYSICS_REVISION,layoutAudit,featuresFor,hazardsFor,slotsFor,migrateLegacyDevices,resetFieldProgress,
+window.Kaskad={version:'0.14.0',snapshot:()=>copy(state),get world(){return world;},get mode(){return mode;},get ui(){return copy({...ui,focus:null});},get camera(){return renderer?renderer.camera():null;},engine:PinballWorld,config:engineConfig,calculateRate,goal,reward,skills:copy(SKILLS),types:copy(TYPES),launcher:LAUNCHER,physicsRevision:PHYSICS_REVISION,layoutAudit,featuresFor,hazardsFor,slotsFor,migrateLegacyDevices,resetFieldProgress,
  visualState:id=>renderer.visualState(id)};
 
 })();</script>

@@ -1,4 +1,4 @@
-# Kaskad Pinball v0.13
+# Kaskad Pinball v0.14
 
 Мобильный HTML-прототип incremental pinball. Игра автономная: `index.html` не требует сервера, CDN или внешних ассетов.
 
